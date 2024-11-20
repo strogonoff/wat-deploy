@@ -14,10 +14,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-        with:
-          repository: "strogonoff/wat"
-          token: ${{ secrets.GITHUB_TOKEN }}
-          path: "wat"
+      with:
+        repository: "strogonoff/wat"
+        token: ${{ secrets.GITHUB_TOKEN }}
+        path: "wat"
     - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
