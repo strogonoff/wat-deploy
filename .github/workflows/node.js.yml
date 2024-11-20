@@ -17,7 +17,7 @@ jobs:
     - uses: actions/checkout@v4
       with:
         repository: "strogonoff/wat"
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.GH_TOKEN }}
         path: "wat"
         ref: "master"
     - uses: actions/checkout@v4
