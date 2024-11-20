@@ -19,7 +19,7 @@ jobs:
         repository: "strogonoff/wat"
         token: ${{ secrets.GITHUB_TOKEN }}
         path: "wat"
-        branch: "master"
+        ref: "master"
     - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
