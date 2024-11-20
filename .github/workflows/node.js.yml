@@ -20,12 +20,13 @@ jobs:
         token: ${{ secrets.GH_TOKEN }}
         path: "wat"
         ref: "master"
-    - uses: actions/checkout@v4
+    - run: ls -Al
+    - run: cd wat/pkg/maker
+    - run: ls
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-    - run: cd wat/pkg/maker
     - run: yarn run build
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
